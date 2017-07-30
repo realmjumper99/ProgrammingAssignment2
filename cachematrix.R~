@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## This function is used to cacher the matrix and save a list with the various transformations of it
+## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
   inv = NULL
@@ -10,13 +10,13 @@ makeCacheMatrix <- function(x = matrix()) {
     inv <<- NULL
   }
   getMatrix = function() x
-  setInvMatrix = function(inverse) inv <<- inverse # invert the matrix
+  setInvMatrix = function(inverse) inv <<- inverse
   getInvMatrix = function() inv
   list(set=setMatrix, get=getMatrix, setinverse=setInvMatrix,getinverse=getInvMatrix) ## Returns the list of variables needed
 }
 
 
-## This function is used to return an inverse matrix to the one submittted. If it is already cached it will pull from the cached matrix
+## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
     inv = x$getinverse()
